@@ -10,6 +10,6 @@ A label which is located above a checkbox can be customized. Specify it by setti
 
 ## Dropdown list
 
-To specify the items of a dropdown list set **items** property in the parent component. Use **DropdownListItem** as a template for dropdown list items. Set **required** property to true or false in html of the parent component or use reactive or template-driven form way to specify it. Example:
+To specify the items of a dropdown list set **items** property in the parent component. Use **DropdownListItem** as a template for dropdown list items. Set **required** property to true or false in html of the parent component or use reactive or template-driven form way to apply basic requirement validation. Example:
 
     <app-customdropdownlist [required]="false" formControlName="dropdownListCustom" [items]="items"></app-customdropdownlist>
