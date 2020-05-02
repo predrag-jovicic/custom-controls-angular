@@ -1,0 +1,68 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+.current, .results{
+    cursor: pointer;
+}
+.current{
+    width:200px;
+    border:1px solid #d1b1d2;
+    padding:0.5rem;
+    color:white;
+    background: #d1b1d2;
+    border-radius: 7.5px;
+    transition: border-radius 0.5s, background 1s;
+}
+.current:hover{
+    background: #00d2c5;
+}
+.currentTransformation{
+    border-radius: 7.5px 7.5px 0 0;
+}
+.option{
+    width:200px;
+    padding:0.5rem;
+    position:relative;
+    background-color:#d1b1d2;
+    border:1px solid #00d2c5;
+    transform: translate(10px);
+    color:white;
+    opacity:0;
+    transition: transform 0.75s, opacity 0.5s;
+}
+.optionTransformation{
+    transform: translate(0px);
+    opacity:1;
+}
+.option:hover{
+    background-color:#00d2c5;
+}
+.option:last-child{
+    border-radius: 0 0 7.5px 7.5px;
+}
+.results{
+    height:191px;
+    opacity:0;
+    overflow-y: overlay;
+    overflow-x: hidden; 
+    transition: opacity 0.5s;
+    position:absolute;
+    pointer-events: none;
+}
+.resultsTransformation{
+    opacity:1;
+    pointer-events: all;
+}
+.results::-webkit-scrollbar {
+    width: 7px;
+    background-color: #d1b1d2;
+}
+.results::-webkit-scrollbar-thumb {
+    background-color: #00d2c5;
+}
+.results::-webkit-scrollbar-track {
+    border:2px solid #00d2c5;
+}

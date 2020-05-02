@@ -1,0 +1,11 @@
+<div class="container">
+    <label>Dropdown items</label>
+    <div class="container-control">
+      <div class="current" [ngClass]="{'currentTransformation': resultsVisible}" (click)="toggle()">
+        {{ selectedText }}
+      </div>
+      <div class="results" [ngClass]="{'resultsTransformation': resultsVisible}">
+        <div class="option" [ngClass]="{'optionTransformation': resultsVisible}" (click)="selectOption(item)" *ngFor="let item of items" [attr.data-value]="item.id">{{ item.text }}</div>
+      </div>
+    </div>
+</div>
