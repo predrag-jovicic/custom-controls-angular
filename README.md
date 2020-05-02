@@ -18,6 +18,6 @@ You can set the inital value for the checkbox regular way by using reactive or t
     
 ## Dropdown list
 
-To specify the items of a dropdown list set **items** property in the parent component. Use **DropdownListItem** as a template for dropdown list items. Set **required** attribute to true or false in html of the parent component or use reactive or template-driven form way to apply basic requirement validation. To customize the label of the dropdown item, set attribute **dropdownListLabel** to any string value. Example of html:
+To specify the items of a dropdown list set **items** property in the parent component. Use **DropdownListItem** as a template for dropdown list items. Set **required** attribute to true or false in html of the parent component or use reactive or template-driven form way to apply basic requirement validation. To customize the label of the dropdown list, set attribute **dropdownListLabel** to any string value. Example of html:
 
     <app-customdropdownlist [required]="false" [dropdownListLabel]="'Dropdown list'" [items]="items" formControlName="dropdownListCustom"></app-customdropdownlist>
