@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR, Validator, AbstractControl, ValidationErrors, NG_VALIDATORS, RequiredValidator } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 @Component({
   selector: 'app-customcheckbox',
   templateUrl: './customcheckbox.component.html',
@@ -10,6 +10,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR, Validator, AbstractControl, Va
 })
 export class CustomcheckboxComponent implements OnInit, ControlValueAccessor  {
   enabled : boolean = false;
+  @Input() labelText;
   private onChange : (flag:boolean) => void;
   constructor() { }
 

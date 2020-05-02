@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class AppComponent{
   title = 'customcontrols';
   mainForm : FormGroup;
+  labelText = "Enter text here";
   items = [
     { id : 1, text : "Option 1" },
     { id : 2, text : "Option 2" },
