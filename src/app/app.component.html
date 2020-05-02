@@ -3,8 +3,8 @@
         <input type="text" formControlName="textualField"/>
     </div>
     <div class="container">
-        <app-customcheckbox [labelText]="labelText" formControlName="checkboxCustom"></app-customcheckbox>
-        <app-customdropdownlist [required]="false" formControlName="dropdownListCustom" [items]="items"></app-customdropdownlist>
+        <app-customcheckbox [labelText]="'Custom checkbox'" formControlName="checkboxCustom"></app-customcheckbox>
+        <app-customdropdownlist [required]="false" [dropdownListLabel]="'Dropdown list'" [items]="items" formControlName="dropdownListCustom"></app-customdropdownlist>
     </div>
     <div class="container">
         <button type="button" (click)="checkValues()">Submit</button>

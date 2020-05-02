@@ -14,6 +14,7 @@ import { DropdownListItem } from '../shared/DropdownListItem';
 export class CustomdropdownlistComponent implements OnInit, ControlValueAccessor, Validator {
   @Input() items : DropdownListItem[] = [];
   @Input() required : boolean;
+  @Input() dropdownListLabel : string;
   private onChange:(value:DropdownListItem) => void;
   resultsVisible : boolean = false;
   selectedText : string = "SELECT";
