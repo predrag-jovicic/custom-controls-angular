@@ -1,4 +1,4 @@
-# Customcontrols
+# Custom Controls
 
 In this project there are 2 custom form controls created as components, and therefore can be reused quite easily. Every interaction with a control is followed by a visual animation. Available controls for now:
 
