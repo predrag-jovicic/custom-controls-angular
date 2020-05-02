@@ -1,27 +1,15 @@
 # Customcontrols
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+In this project there are 2 custom form controls created as components, and therefore can be reused quite easily. Every interaction with a control is followed by a visual animation. Available controls for now:
 
-## Development server
+## Checkbox
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+A label which is located above a checkbox can be customized. Specify it by setting **labelText** property in the parent component. You can set the inital value for the checkbox regular way by using reactive or template-driven forms. Example:
 
-## Code scaffolding
+    <app-customcheckbox [labelText]="labelText" formControlName="checkboxCustom"></app-customcheckbox>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Dropdown list
 
-## Build
+To specify the items of a dropdown list set **items** property in the parent component. Use **DropdownListItem** as a template for dropdown list items. Set **required** property to true or false in html of the parent component. Example
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    <app-customdropdownlist [required]="false" formControlName="dropdownListCustom" [items]="items"></app-customdropdownlist>
