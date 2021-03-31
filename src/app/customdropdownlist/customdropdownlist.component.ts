@@ -16,7 +16,9 @@ export class CustomdropdownlistComponent implements OnInit, ControlValueAccessor
   @Input() required : boolean;
   @Input() dropdownListLabel : string;
   private onChange:(value:DropdownListItem) => void;
+  private onTouched:() => void;
   resultsVisible : boolean = false;
+  touched: boolean = false;
   selectedText : string = "SELECT";
   constructor() { }
 
@@ -26,6 +28,10 @@ export class CustomdropdownlistComponent implements OnInit, ControlValueAccessor
 
   toggle(){
     this.resultsVisible = !this.resultsVisible;
+    if(!this.touched){
+      this.touched = true;
+      this.onTouched();
+    }
   }
 
   selectOption(item : DropdownListItem){
@@ -47,7 +53,7 @@ export class CustomdropdownlistComponent implements OnInit, ControlValueAccessor
   }
 
   registerOnTouched(fn: any): void {
-    
+    this.onTouched = fn;
   }
   
   validate(control:AbstractControl): ValidationErrors {

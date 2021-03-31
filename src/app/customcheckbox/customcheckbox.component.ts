@@ -10,8 +10,10 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class CustomcheckboxComponent implements OnInit, ControlValueAccessor  {
   enabled : boolean = false;
+  touched : boolean = false;
   @Input() labelText;
   private onChange : (flag:boolean) => void;
+  private onTouched : () => void;
   constructor() { }
 
   ngOnInit() {
@@ -19,6 +21,10 @@ export class CustomcheckboxComponent implements OnInit, ControlValueAccessor  {
 
   toggle(){
     this.enabled = !this.enabled;
+    if(!this.touched){
+      this.touched = true;
+      this.onTouched();
+    }
     this.onChange(this.enabled);
   }
   
@@ -31,6 +37,6 @@ export class CustomcheckboxComponent implements OnInit, ControlValueAccessor  {
   }
 
   registerOnTouched(fn: any): void {
-    
+    this.onTouched = fn;
   }
 }
