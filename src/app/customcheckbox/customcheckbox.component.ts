@@ -11,7 +11,6 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 export class CustomcheckboxComponent implements OnInit, ControlValueAccessor  {
   enabled : boolean = false;
   touched : boolean = false;
-  @Input() labelText;
   private onChange : (flag:boolean) => void;
   private onTouched : () => void;
   constructor() { }
